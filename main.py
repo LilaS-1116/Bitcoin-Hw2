@@ -61,9 +61,9 @@ def fetch_nav_data(period="30d"):
     df['Date'] = df['Date'].dt.strftime('%Y-%m-%d')
     return df.to_dict(orient='records')
 
-# --- NEW: The Gemini 2.0 AI Function ---
+# --- NEW: The Gemini 3.0 AI Function ---
 def generate_ai_insight(data_records):
-    """Passes the most recent 7 days of data to Gemini 2.0 Flash for analysis."""
+    """Passes the most recent 7 days of data to Gemini 3 Flash for analysis."""
     # Grab just the last 7 days to keep the prompt focused
     recent_data = data_records[-7:]
     
