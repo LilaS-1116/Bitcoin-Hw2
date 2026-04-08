@@ -76,7 +76,7 @@ def generate_ai_insight(data_records):
     
     try:
         # Use the newest Gemini 2.0 Flash model
-        model = genai.GenerativeModel('gemini-3.0-flash')
+        model = genai.GenerativeModel('gemini-3-flash')
         response = model.generate_content(prompt)
         return response.text.strip()
     except Exception as e:
