@@ -9,7 +9,7 @@ from google import genai
 
 # Load the API key from the .env file and configure Gemini
 load_dotenv()
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 app = FastAPI()
 
